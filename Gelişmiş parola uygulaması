@@ -1,0 +1,78 @@
+import time
+
+def parola_oluştur():
+    while True:
+        parola = input("Parola Oluşturunuz:")
+        if parola.islower() or parola.isupper():
+            print("Şifre oluştururken hem büyük hem küçük harfler kullanmalısınız!")
+            time.sleep(0.5)
+            print("Tekrar deneyin..")
+
+        elif len(parola) < 5:
+            print("Parola 5 harften uzun olmalıdır.!")
+
+        else:
+            print("Doğrulanıyor..")
+            time.sleep(0.5)
+            print("Parola Başarıyla oluşturuldu..")
+            with open("bjk.txt","r+",encoding="utf-8") as file:
+                data_base = file.write(parola)
+                break
+
+def giriş_yap():
+    with open("bjk.txt", "r", encoding="utf-8") as file:
+        data_base = file.read()
+    while True:
+        giriş = input("Şifreni gir:")
+
+        if giriş == data_base:
+            print("Doğrulanıyor...")
+            time.sleep(1)
+            print("Giriş Onaylandı..")
+            print("HOŞGELDİNİZ...")
+            break
+
+        else:
+            print("Doğrulanıyor...")
+            time.sleep(1)
+            print("Yanlış şifre.")
+
+def parola_degistir():
+    with open("bjk.txt", "r", encoding="utf-8") as file:
+        data_base = file.read()
+    while True:
+        eski_sifre = input("Eski şifreni gir:")
+        if eski_sifre == data_base:
+            yeni_sifre = input("Yeni şifreni gir:")
+            print("Şifre değiştiriliyor...")
+            time.sleep(0.7)
+            print("Başarıyla değiştirildi...")
+            with open("bjk.txt", "r+", encoding="utf-8") as file:
+                data_base = file.write(yeni_sifre)
+                break
+        elif eski_sifre == "q":
+            print("Ana menüye dönülüyor..")
+            time.sleep(0.5)
+            break
+        else:
+            print("Şifre yanlış! Tekrar deneyin.")
+print("""**********-SEÇENEKLER-**********
+1.Parola oluştur
+
+2.Parola değiştir
+
+3.Giriş yap
+********************************
+""")
+
+while True:
+    seçenek = input("Bir seçenek girin:")
+    if seçenek == "1":
+        parola_oluştur()
+
+    elif seçenek == "2":
+        parola_degistir()
+
+    elif seçenek == "3":
+        giriş_yap()
+
