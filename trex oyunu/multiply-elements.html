@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="header">
+        <h1 class="card-title h1" id="title">To Do APP</h1>
+
+    </div>
+
+    <ul id ="task-list">
+        <li class="task">
+            Bolum1
+        </li>
+        <li class="task">
+            Bolum2
+        </li>
+        <li class="task">
+            Bolum3
+        </li>
+    </ul>
+
+    
+    
+    
+    <script>
+
+        let sonuc , taskList; 
+
+
+        sonuc = document.getElementsByClassName("task")[1];             
+        
+        taskList = document.getElementsByClassName("task");
+        taskList = document.querySelectorAll("#task-list li");   
+
+
+        // for(let i=0; i<taskList.length;i++){  
+
+        //     console.log(taskList[i]);
+        //     taskList.style.color ="red";
+        // } 
+
+
+        console.log(taskList);
+
+
+        // console.log(sonuc);
+       
+    </script>
+
+</body>
+</html>
