@@ -1,0 +1,52 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+    
+}
+:root{
+    
+    --header-font-color:#333;
+    --header-bg-color: #c7c6c6;
+    --container-txt-color:rgb(0, 0, 0);
+    --container-bg-color:#fff;
+}
+.dark-theme{
+    --header-font-color:#c7c6c6;
+    --header-bg-color: #333;
+    --container-txt-color:#fff;
+    --container-bg-color:rgb(0, 0, 0);
+}
+
+.navigationBar{
+    width: 100%;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    color: var(--header-font-color);
+    padding: 40px 100px;
+    transition: .5s ease all;
+    
+    
+}
+.sticky{
+
+    padding: 15px 100px;
+    font-size:15px ;
+    background: var(--header-bg-color);
+}
+
+.container,.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 25px;
+    color: var(--container-txt-color);
+    background: var(--container-bg-color);
+    transition: .5s ease all;
+   
+}
