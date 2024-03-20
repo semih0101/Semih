@@ -1,0 +1,93 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(pexels-abdullah-ghatasheh-1631677.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    
+}
+
+.container {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.4);
+    height: 100vh;
+    
+}
+
+.havaIcon{
+    font-size: 120px;
+    color: rgb(220, 216, 216);
+}
+
+.header{
+    padding-bottom: 10px;
+    font-size: 30px;
+    color:#d3b695;
+    border: 4px;
+}
+
+.app{
+    height:40vh;
+    margin: auto;
+    border: 1px ;
+    box-shadow: 3px 5px 8px rgba(0, 0, 0, 0.6);
+    padding: 20px 60px;
+    height: 650px;
+    border-radius: 7px;
+    
+    
+}
+/* search */
+input{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    width: 100%;
+    padding: 10px;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 2px solid #d3b695;
+    font-size: 20px;
+    text-align: center;
+    color: #fff;
+    font-size: 25px;
+    
+    
+}
+/* content */
+.city{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+    font-weight: 600;
+    padding: 20px ;
+}
+.temp{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+   font-weight: 600;
+    padding: 20px;
+    font-size: 100px;
+
+}
+
+.desc{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+    font-weight: 600;
+    padding: 20px ;
+}
+.minmax{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+    font-weight: 600;
+    
+}
+
